@@ -12,7 +12,12 @@
     "type": "git",
     "url": "git+https://github.com/jeanmonse16/adfl-frontend.git"
   },
-  "keywords": ["react", "vue", "adviceMaker", "app"],
+  "keywords": [
+    "react",
+    "vue",
+    "adviceMaker",
+    "app"
+  ],
   "author": "Jeanpier Monserrate, Joalbert Milano",
   "license": "ISC",
   "bugs": {
