@@ -4,7 +4,7 @@ class Go extends React.Component {
   render () {
     return (
       <div className='go'>
-        <button type='submit' className='btn'>Login</button>
+        <button type='submit' className='btn' onClick={(e) => e.preventDefault()}>Login</button>
       </div>
     )
   }

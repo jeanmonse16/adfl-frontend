@@ -1,8 +1,8 @@
 import React from 'react'
 import { render } from 'react-dom'
 
-import Login from './pages/Login.js'
+import App from './App'
 
 const container = document.getElementById('app')
 
-render(<Login />, container)
+render(<App />, container)

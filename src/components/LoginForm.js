@@ -20,7 +20,7 @@ class LoginForm extends React.Component {
             placeholderText='Password'
           />
           <div className='forgot-password'>
-            <a href='#'>Forgot Password</a>
+            <a style={{ fontFamily: 'Open Sans', fontWeight: '500' }}>Forgot Password</a>
           </div>
           <Go />
         </form>

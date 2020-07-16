@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 class InputGroup extends React.Component {
   render () {
@@ -10,6 +10,14 @@ class InputGroup extends React.Component {
       </div>
     )
   }
+}
+
+function login (user) {
+  return fetch('https://adfldemo.com/api/auth/login/', {
+    method: 'post',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(user)
+  }).then(response => console.log(response))
 }
 
 export default InputGroup
