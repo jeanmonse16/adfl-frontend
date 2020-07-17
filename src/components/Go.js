@@ -1,12 +1,9 @@
 import React from 'react'
 
-class Go extends React.Component {
-  render () {
-    return (
-      <div className='go'>
-        <button type='submit' className='btn' onClick={(e) => e.preventDefault()}>Login</button>
-      </div>
-    )
-  }
-}
+const Go = ({ onClick }) => (
+  <div className='go'>
+    <button type='submit' className='btn' style={{ cursor: 'pointer' }} onClick={(e) => onClick(e)}>Login</button>
+  </div>
+)
+
 export default Go
