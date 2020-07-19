@@ -21,6 +21,21 @@ export const LoginForm = () => {
     e.preventDefault()
     if (UserInfo.email === '' && UserInfo.password === '' && !UserInfo.email.includes('@.') && !UserInfo.password.length > 4) { return 0 } else {
       return login(UserInfo)
+        .then(response => {
+          response.text().then(text => {
+            const data = text && JSON.parse(text)
+            console.log(data)
+            if (!response.ok) {
+              if (response.status === 401) {
+                alert('Permission Error.')
+              }
+              const error = (data && data.message) || response.statusText
+              return Promise.reject(error)
+            }
+            return data
+          })
+        })
+        .catch(e => console.error(e))
     }
   }
 
@@ -30,8 +45,7 @@ export const LoginForm = () => {
       method: 'post',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(user)
-    }).then(response => console.log(`${response} éxito`))
-      .catch(e => console.error(e))
+    })
   }
 
   return (
