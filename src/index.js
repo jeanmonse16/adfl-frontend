@@ -1,8 +1,8 @@
 import React from 'react'
 import { render } from 'react-dom'
 
-import Dashboard from './pages/Dashboard.js'
+import Campaign from './pages/Campaign.js'
 
 const container = document.getElementById('app')
 
-render(<Dashboard />, container)
+render(<Campaign />, container)

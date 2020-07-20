@@ -10,8 +10,7 @@ class Dashboard extends React.Component{
         return(
             <div className="dashboardContainer">
                 <TopNav 
-                    name = "Agency"
-                    profileImage = "../images/employee.jpg"
+                    title = "Agency Dashboard"
                 />
                 <DashModal />
                 <WelcomeBackButton />
