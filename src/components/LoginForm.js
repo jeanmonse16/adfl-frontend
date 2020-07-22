@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { createPortal } from 'react-dom'
 import LoginLogo from '../components/LoginLogo.js'
 import InputGroup from '../components/InputGroup.js'
 import Go from '../components/Go.js'
@@ -10,16 +11,16 @@ export const LoginForm = () => {
   })
 
   const onChange = e => {
+    setMessageError(false)
     setUserInfo({
       ...UserInfo,
       [e.target.name]: e.target.value
     })
-    console.log(UserInfo)
   }
 
   const onSubmit = e => {
     e.preventDefault()
-    if (UserInfo.email === '' && UserInfo.password === '' && !UserInfo.email.includes('@.') && !UserInfo.password.length > 4) { return 0 } else {
+    if (UserInfo.email === '' || UserInfo.password === '' || !UserInfo.email.includes('@') || !UserInfo.email.includes('.com') || !UserInfo.password.length > 4) { return setMessageError(true) } else {
       return login(UserInfo)
         .then(response => {
           response.text().then(text => {
@@ -28,6 +29,9 @@ export const LoginForm = () => {
             if (!response.ok) {
               if (response.status === 401) {
                 alert('Permission Error.')
+              }
+              if (response.status === 400) {
+                setBadLoginRequestMessage(true)
               }
               const error = (data && data.message) || response.statusText
               return Promise.reject(error)
@@ -48,17 +52,46 @@ export const LoginForm = () => {
     })
   }
 
+  const [messageError, setMessageError] = useState(false)
+  const [badLoginRequestMessage, setBadLoginRequestMessage] = useState(false)
+
   return (
     <div className='login-form'>
       <LoginLogo />
       <form>
         <InputGroup icon='loginIcons fal fa-user' nameId='email' placeHolderText='User Email' onChange={onChange} />
         <InputGroup icon='loginIcons fal fa-lock' nameId='password' placeHolderText='Password' onChange={onChange} />
+        {messageError
+          ? <div style={{ display: 'block', width: '100%', marginTop: '0.25rem', fontSize: '80%', color: '#f86c6b' }}>
+            <span style={{ marginRight: '150px' }}>Ambos campos deben ser válidos</span>
+          </div>
+          : null}
         <div className='forgot-password'>
-          <a style={{ fontFamily: 'Open Sans', fontWeight: '500' }}>Forgot Password</a>
+          <a style={{ fontFamily: 'Arial', fontWeight: '500', fontSize: '12px' }}>Forgot Password</a>
         </div>
         <Go onClick={onSubmit} />
       </form>
+      {badLoginRequestMessage
+        ? <BadLoginRequestModal />
+        : null}
     </div>
+  )
+}
+
+const BadLoginRequestModal = () => {
+  return createPortal(
+    <div className='generic-modal hide-footer fadeIn'>
+      <div tabIndex='-1' role='dialog' className='modal overflow-auto fade show d-block modal-warning'>
+        <div dialog='document' className='modal-dialog'>
+          <div className='modal-content'>
+            <header className='modal-header'>
+              <h5 className='modal-title'>Warning</h5>
+              <button type='button' aria-label='Close' className='close'>x</button>
+            </header>
+            <div className='modal-body'>Credenciales inválidas</div>
+          </div>
+        </div>
+      </div>
+    </div>, document.getElementById('modal')
   )
 }
