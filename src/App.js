@@ -1,5 +1,10 @@
 import React from 'react'
+import Campaing from './pages/Campaign.js'
 
 export default () => {
-  return <p>Hola mundo </p>
+  return (
+    <div>
+        <Campaing />
+    </div>
+  )
 }

@@ -1,7 +1,7 @@
 import React from 'react'
-import LoginLogo from '../components/LoginLogo.js'
-import InputGroup from '../components/InputGroup.js'
-import Go from '../components/Go.js'
+import LoginLogo from './LoginLogo.js'
+import InputGroup from './InputGroup.js'
+import Go from './Go.js'
 
 class LoginForm extends React.Component{
     render(){

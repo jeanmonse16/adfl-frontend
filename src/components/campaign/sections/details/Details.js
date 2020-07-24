@@ -1,8 +1,8 @@
 import React from 'react'
-import ChooseTitle from '../components/ChooseTitle.js'
-import FormGroup from '../components/FormGroup.js'
-import NextButton from '../components/NextButton.js'
-import HelpMenu from '../components/HelpMenu.js'
+import ChooseTitle from './ChooseTitle.js'
+import FormGroup from './FormGroup.js'
+import NextButton from './NextButton.js'
+import HelpMenu from './HelpMenu.js'
 
 class Details extends React.Component{
     render(){

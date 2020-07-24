@@ -1,5 +1,5 @@
 import React from 'react'
-import Step from '../components/Step.js'
+import Step from './Step.js'
 
 class CampaignTimeline extends React.Component{
     render(){
