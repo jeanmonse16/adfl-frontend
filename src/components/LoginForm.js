@@ -64,16 +64,13 @@ export const LoginForm = () => {
         {messageError
           ? <div style={{ display: 'block', width: '100%', marginTop: '0.25rem', fontSize: '80%', color: '#f86c6b' }}>
             <span style={{ marginRight: '150px' }}>Ambos campos deben ser válidos</span>
-          </div>
+            </div>
           : null}
         <div className='forgot-password'>
           <a style={{ fontFamily: 'Arial', fontWeight: '500', fontSize: '12px' }}>Forgot Password</a>
         </div>
         <Go onClick={onSubmit} />
       </form>
-      {badLoginRequestMessage
-        ? <BadLoginRequestModal />
-        : null}
     </div>
   )
 }
