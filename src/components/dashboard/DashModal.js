@@ -1,5 +1,5 @@
 import React from 'react'
-import Choice from '../components/Choice.js'
+import Choice from './Choice.js'
 
 class DashModal extends React.Component{
     render(){

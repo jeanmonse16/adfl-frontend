@@ -1,5 +1,5 @@
 import React from 'react'
-import ProfileImage from '../images/employee.jpg'
+import ProfileImage from '../../images/employee.jpg'
 
 class ProfileButton extends React.Component{
     render(){

@@ -1,7 +1,7 @@
 import React from 'react'
-import AgencyShortcut from '../components/AgencyShortcut.js'
-import ActionItems from '../components/ActionItems.js'
-import HamburgerMenuButton from '../components/HamburgerMenuButton.js'
+import AgencyShortcut from './AgencyShortcut.js'
+import ActionItems from './ActionItems.js'
+import HamburgerMenuButton from './HamburgerMenuButton.js'
 
 class TopNav extends React.Component{
     render(){

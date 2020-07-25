@@ -1,5 +1,10 @@
 import React from 'react'
+import CampaignWizard from './pages/CampaignWizard.js'
 
 export default () => {
-  return <p> Hola mundo </p>
+  return (
+    <div>
+      <CampaignWizard />
+    </div>
+  )
 }
