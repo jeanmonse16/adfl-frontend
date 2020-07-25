@@ -1,8 +1,15 @@
+<<<<<<< HEAD:src/components/LoginForm.js
 import React, { useState } from 'react'
 import { createPortal } from 'react-dom'
 import LoginLogo from '../components/LoginLogo.js'
 import InputGroup from '../components/InputGroup.js'
 import Go from '../components/Go.js'
+=======
+import React from 'react'
+import LoginLogo from './LoginLogo.js'
+import InputGroup from './InputGroup.js'
+import Go from './Go.js'
+>>>>>>> mockups:src/components/login/LoginForm.js
 
 export const LoginForm = () => {
   const [UserInfo, setUserInfo] = useState({

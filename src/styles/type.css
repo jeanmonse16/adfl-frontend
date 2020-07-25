@@ -1,0 +1,18 @@
+.timeline-step{
+    margin-top: 14px;
+    min-height: 500px;
+}
+.campaign-type{
+    position: relative;
+    text-align: center;
+}
+.campaign-type .list-types{
+    text-align: center;
+    display: inline-block;
+    margin-top: 5%;
+    position: relative;
+}
+.campaign-type .list-types .list-center{
+    width: 90%;
+    margin: auto;
+}

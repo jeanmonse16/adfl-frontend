@@ -1,7 +1,7 @@
 import React from 'react'
-import TopNav from '../components/TopNav.js'
-import WelcomeBackButton from '../components/WelcomeBackButton'
-import DashModal from '../components/DashModal.js'
+import TopNav from '../components/TopNav/TopNav.js'
+import WelcomeBackButton from '../components/dashboard/WelcomeBackButton.js'
+import DashModal from '../components/dashboard/DashModal.js'
 import '../styles/dashboard.css'
 import '../fontawesome-pro/js/all.js'
 

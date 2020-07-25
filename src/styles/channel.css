@@ -1,0 +1,48 @@
+.timeline-step{
+    margin-top: 14px;
+    min-height: 500px;
+}
+.campaign-type{
+    position: relative;
+    text-align: center;
+}
+.campaign-type .list-types{
+    text-align: center;
+    display:inline-block;
+    margin-top: 5%;
+    position: relative;
+}
+.campaign-type .list-types .types{
+    transition: all 0.4s ease;
+    text-align: center;
+    position: relative;
+    float: left;
+    margin: 25px 44px;
+}
+.campaign-type .list-types .types .title{
+    color: #b7b7b7;
+    margin-top: 10px;
+    background: transparent;
+    border-radius: 50px;
+    padding: 3px;
+    font-size: 12px;
+    opacity: 0.2;
+}
+.campaign-type .list-types .types .type-icon{
+    position: relative;
+    transition: all 0.4s ease;
+    width: 140px;
+    height: 140px;
+    overflow: visible;
+    border: 1px solid rgba(97, 97, 97, 0.22);
+    border-radius: 99em;
+    padding: 38px 30px;
+    color: rgba(97, 97, 97, 0.22);
+    transform: scale(1);
+    transform: rotate(0deg);
+    background: transparent;
+    box-shadow: 2px 2px 15px 2px rgba(0, 0, 0, 0.12);
+}
+.campaign-type .list-types .types .type-icon:hover{
+    cursor: pointer;
+}

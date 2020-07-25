@@ -1,7 +1,7 @@
 import React from 'react'
-import ThemesButton from '../components/ThemesButton.js'
-import NotificationsButton from '../components/NotificationsButton.js'
-import ProfileButton from '../components/ProfileButton.js'
+import ThemesButton from './ThemesButton.js'
+import NotificationsButton from './NotificationsButton.js'
+import ProfileButton from './ProfileButton.js'
 
 
 class ActionItems extends React.Component{
