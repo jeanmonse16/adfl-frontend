@@ -1,11 +1,16 @@
 import React from 'react'
+import '../styles/campaignWizard.css'
+import '../styles/details.css'
+import '../styles/channel.css'
+import '../styles/client.css'
+import '../styles/type.css'
 import '../styles/campaign.css'
 import TopNav from '../components/topNav/TopNav.js'
 import CampaignTimeline from '../components/campaign/CampaignTimeline.js'
-import Details from '../components/campaign/sections/details/Details.js'
+import Sections from '../components/campaign/sections/Sections.js'
 import '../fontawesome-pro/js/all.js'
 
-class Campaign extends React.Component{
+class CampaignWizard extends React.Component{
     render(){
         return(
             <div>
@@ -13,10 +18,10 @@ class Campaign extends React.Component{
                     title = "Welcome to the Campaign Creation Wizard"
                 />
                 <CampaignTimeline />
-                <Details />
+                <Sections />
             </div>
         )
     }
 }
 
-export default Campaign
+export default CampaignWizard

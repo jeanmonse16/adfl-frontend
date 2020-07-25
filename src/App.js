@@ -1,10 +1,10 @@
 import React from 'react'
-import Campaing from './pages/Campaign.js'
+import CampaignWizard from './pages/CampaignWizard.js'
 
 export default () => {
   return (
     <div>
-        <Campaing />
+        <CampaignWizard />
     </div>
   )
 }
