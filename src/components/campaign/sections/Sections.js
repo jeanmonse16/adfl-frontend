@@ -7,9 +7,9 @@ import Campaing from './campaign/Campaign.js'
 import AdSets from './ad-sets/AdSets.js'
 
 export default () => {
-    return(
-        <div>
-            <Details />
-        </div>
-    )
+  return (
+    <div>
+      <Channel />
+    </div>
+  )
 }

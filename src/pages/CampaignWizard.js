@@ -10,18 +10,18 @@ import CampaignTimeline from '../components/campaign/CampaignTimeline.js'
 import Sections from '../components/campaign/sections/Sections.js'
 import '../fontawesome-pro/js/all.js'
 
-class CampaignWizard extends React.Component{
-    render(){
-        return(
-            <div>
-                <TopNav 
-                    title = "Welcome to the Campaign Creation Wizard"
-                />
-                <CampaignTimeline />
-                <Sections />
-            </div>
-        )
-    }
+class CampaignWizard extends React.Component {
+  render () {
+    return (
+      <div>
+        <TopNav
+          title='Welcome to the Campaign Creation Wizard'
+        />
+        <CampaignTimeline />
+        <Sections />
+      </div>
+    )
+  }
 }
 
 export default CampaignWizard
