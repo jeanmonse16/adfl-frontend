@@ -1,17 +1,10 @@
-<<<<<<< HEAD:src/components/LoginForm.js
 import React, { useState } from 'react'
 import { createPortal } from 'react-dom'
-import LoginLogo from '../components/LoginLogo.js'
-import InputGroup from '../components/InputGroup.js'
-import Go from '../components/Go.js'
-=======
-import React from 'react'
 import LoginLogo from './LoginLogo.js'
 import InputGroup from './InputGroup.js'
 import Go from './Go.js'
->>>>>>> mockups:src/components/login/LoginForm.js
 
-export const LoginForm = () => {
+export default () => {
   const [UserInfo, setUserInfo] = useState({
     email: '',
     password: ''
@@ -43,7 +36,7 @@ export const LoginForm = () => {
               const error = (data && data.message) || response.statusText
               return Promise.reject(error)
             }
-            return window.location.assign('localhost:8080/campaignWizard')
+            return window.Location.href('localhost:8080/campaignWizard')
           })
         })
         .catch(e => console.error(e))
@@ -71,7 +64,7 @@ export const LoginForm = () => {
         {messageError
           ? <div style={{ display: 'block', width: '100%', marginTop: '0.25rem', fontSize: '80%', color: '#f86c6b' }}>
             <span style={{ marginRight: '150px' }}>Ambos campos deben ser válidos</span>
-          </div>
+            </div>
           : null}
         <div className='forgot-password'>
           <a style={{ fontFamily: 'Arial', fontWeight: '500', fontSize: '12px' }}>Forgot Password</a>

@@ -2,7 +2,7 @@ import React from 'react'
 import { Router } from '@reach/router'
 import Login from './pages/Login'
 import Dashboard from './pages/Dashboard'
-import CampaignWizard from './components/campaign/CampaignTimeline'
+import CampaignWizard from './pages/CampaignWizard'
 
 export default () => {
   return (
