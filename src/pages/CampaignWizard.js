@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import '../styles/campaignWizard.css'
 import '../styles/details.css'
 import '../styles/channel.css'
@@ -6,7 +6,6 @@ import '../styles/client.css'
 import '../styles/type.css'
 import '../styles/campaign.css'
 import TopNav from '../components/TopNav/TopNav.js'
-import CampaignTimeline from '../components/campaign/CampaignTimeline.js'
 import Details from '../components/campaign/sections/details/Details.js'
 import Channel from '../components/campaign/sections/channel/Channel.js'
 import Client from '../components/campaign/sections/client/Client.js'
@@ -18,7 +17,7 @@ import Step from '../components/campaign/Step'
 import '../fontawesome-pro/js/all.js'
 
 const CampaignWizard = () => {
-  const [sectionController, setSectionController] = React.useState(TabController([
+  const [tabs, setTabs] = React.useState(TabController([
     {
       id: 'Details',
       module: Details
@@ -45,7 +44,14 @@ const CampaignWizard = () => {
     }
   ]))
 
-  const ActiveTab = sectionController.activeTab().module
+  const [sectionController, setSectionController] = React.useState(tabs.activeTab())
+
+  useEffect(() => {
+    setSectionController(tabs.activeTab())
+    return () => console.log(sectionController)
+  })
+
+  const ActiveTab = sectionController.module
 
   return (
     <div>
@@ -55,8 +61,8 @@ const CampaignWizard = () => {
       {/* <CampaignTimeline sectionController={sectionController} /> */}
       <div className='campaign-timeline wizard-tl'>
         <div className='lineup'>
-          {sectionController.tabs().map((section, i) => {
-            return <Step key={section.id} name={section.id} controller={sectionController} index={i} />
+          {tabs.tabs().map((section, i) => {
+            return <Step key={section.id} name={section.id} controller={setSectionController} index={i} tabs={tabs} />
           }
           )}
           <Step

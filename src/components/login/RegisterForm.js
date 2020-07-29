@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Axios from 'axios'
 import { createPortal } from 'react-dom'
 import LoginLogo from './LoginLogo.js'
 import InputGroup from './InputGroup.js'
@@ -7,7 +8,9 @@ import Go from './Go.js'
 export default () => {
   const [UserInfo, setUserInfo] = useState({
     email: '',
-    password: ''
+    username: '',
+    password: '',
+    confirmedPassword: ''
   })
 
   const onChange = e => {
@@ -44,7 +47,15 @@ export default () => {
     }
   }
 
-  function login (user) {
+  function Register (user) {
+    /* Axios.post(apiUrl, user)
+      .then(function (response) {
+        console.log(response)
+      })
+      .catch(function (error) {
+        console.log(error)
+      })
+    */
     // eslint-disable-next-line no-undef
     return fetch('https://adfldemo.com/api/auth/login/', {
       method: 'post',
@@ -61,7 +72,9 @@ export default () => {
       <LoginLogo />
       <form>
         <InputGroup icon='loginIcons fal fa-user' nameId='email' placeHolderText='User Email' onChange={onChange} />
+        <InputGroup icon='loginIcons fal fa-lock' nameId='username' placeHolderText='Username' onChange={onChange} />
         <InputGroup icon='loginIcons fal fa-lock' nameId='password' placeHolderText='Password' onChange={onChange} />
+        <InputGroup icon='loginIcons fal fa-lock' nameId='confirmedPassword' placeHolderText='Confirm Password' onChange={onChange} />
         {messageError
           ? <div style={{ display: 'block', width: '100%', marginTop: '0.25rem', fontSize: '80%', color: '#f86c6b' }}>
             <span style={{ marginRight: '150px' }}>Ambos campos deben ser válidos</span>
