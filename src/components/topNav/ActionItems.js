@@ -1,7 +1,7 @@
 import React from 'react'
-import ThemesButton from './ThemesButton.js'
-import NotificationsButton from './NotificationsButton.js'
-import ProfileButton from './ProfileButton.js'
+import ThemesButton from './ThemesButton'
+import NotificationsButton from './NotificationsButton'
+import ProfileButton from './ProfileButton'
 
 const ActionItems = () => {
   return (

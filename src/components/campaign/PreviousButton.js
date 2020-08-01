@@ -1,7 +1,9 @@
 import React from 'react'
 
-export default () => {
+const PreviousButton = () => {
     return(
         <a className="tl-btn tl-next btn-secondary">Previous</a>
     )
 }
+
+export default PreviousButton

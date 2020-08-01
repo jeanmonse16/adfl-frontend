@@ -1,10 +1,13 @@
 import React from 'react'
 
-export default (props) =>{
+const Types = (props) => {
+    const {typeIcon, typeTitle} = props
     return(
         <div className="types">
-            <i className={props.typeIcon}></i>
-            <div className="title">{props.typeTitle}</div>
+            <i className={typeIcon}></i>
+            <div className="title">{typeTitle}</div>
         </div>
     )
 }
+
+export default Types

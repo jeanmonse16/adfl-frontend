@@ -1,9 +1,8 @@
 import React from 'react'
 import ProfileImage from '../../images/employee.jpg'
 
-class ProfileButton extends React.Component {
-  render () {
-    return (
+const ProfileButton = () => {
+  return (
       <div>
         <div className='profile'>
           <img src={ProfileImage} />
@@ -33,6 +32,5 @@ class ProfileButton extends React.Component {
       </div>
     )
   }
-}
 
 export default ProfileButton

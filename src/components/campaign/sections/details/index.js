@@ -1,8 +1,7 @@
 import React from 'react'
-import ChooseTitle from '../../ChooseTitle.js'
-import FormGroup from './FormGroup.js'
-import NextButton from '../../NextButton.js'
-import HelpMenu from '../../HelpMenu.js'
+import  './details.css'
+import FormGroup from './FormGroup'
+import ChooseTitle from '../../ChooseTitle'
 
 const Details = () => {
   return (
@@ -57,13 +56,6 @@ const Details = () => {
           </div>
         </div>
       </div>
-      <div className='control-panel-buttons'>
-        <NextButton />
-      </div>
-      <HelpMenu
-        title='Campaign Type'
-        text='This block of text will explain to the user what they need to do in this section of the wizard. Each section is different, therefore this block is made up of dynamic text.'
-      />
     </div>
   )
 }

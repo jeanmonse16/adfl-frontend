@@ -1,8 +1,7 @@
 import React from 'react'
 
-class ThemesButton extends React.Component {
-  render () {
-    return (
+const ThemesButton = () => {
+  return (
       <div className='themes' id='themes'>
                 Theme
         <div className='themeSelect'>
@@ -12,5 +11,4 @@ class ThemesButton extends React.Component {
       </div>
     )
   }
-}
 export default ThemesButton

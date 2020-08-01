@@ -1,11 +1,10 @@
 import React from 'react'
-import ChooseTitle from '../../ChooseTitle.js'
-import Search from '../Search.js'
-import Card from '../Card.js'
+import './adSets.css'
+import ChooseTitle from '../../ChooseTitle'
+import Search from '../Search'
+import Card from '../Card'
+
 import AcctImg from '../../../../images/acctImg.png'
-import NextButton from '../../NextButton.js'
-import PreviousButton from '../../PreviousButton.js'
-import HelpMenu from '../../HelpMenu.js'
 
 export default () => {
     return(
@@ -40,14 +39,6 @@ export default () => {
                     />
                 </div>
             </div>
-            <div className="control-panel-buttons">
-                <PreviousButton />
-                <NextButton />
-            </div>
-            <HelpMenu 
-                title = "Campaign Type"
-                text = "This block of text will explain to the user what they need to do in this section of the wizard. Each section is different, therefore this block is made up of dynamic text."
-            />
         </div>
     )
 }

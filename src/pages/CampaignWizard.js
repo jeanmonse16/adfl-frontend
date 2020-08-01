@@ -1,20 +1,18 @@
 import React, { useEffect } from 'react'
 import '../styles/campaignWizard.css'
-import '../styles/details.css'
-import '../styles/channel.css'
-import '../styles/client.css'
-import '../styles/type.css'
-import '../styles/campaign.css'
-import TopNav from '../components/TopNav/TopNav.js'
-import Details from '../components/campaign/sections/details/Details.js'
-import Channel from '../components/campaign/sections/channel/Channel.js'
-import Client from '../components/campaign/sections/client/Client.js'
-import Type from '../components/campaign/sections/type/Type.js'
-import Campaign from '../components/campaign/sections/campaign/Campaign.js'
-import AdSets from '../components/campaign/sections/ad-sets/AdSets.js'
+import '../fontawesome-pro/js/all.js'
+import TopNav from '../components/TopNav/TopNav'
+import Details from '../components/campaign/sections/details/'
+import Channel from '../components/campaign/sections/channel'
+import Client from '../components/campaign/sections/client'
+import Type from '../components/campaign/sections/type'
+import Campaign from '../components/campaign/sections/campaign'
+import AdSets from '../components/campaign/sections/ad-sets'
 import TabController from '../components/TabController'
 import Step from '../components/campaign/Step'
-import '../fontawesome-pro/js/all.js'
+import NextButton from '../components/campaign/NextButton'
+import PreviousButton from '../components/campaign/PreviousButton'
+import HelpMenu from '../components/campaign/HelpMenu'
 
 const CampaignWizard = () => {
   const [tabs, setTabs] = React.useState(TabController([
@@ -85,6 +83,14 @@ const CampaignWizard = () => {
       <div>
         <ActiveTab />
       </div>
+      <div className='control-panel-buttons'>
+        <PreviousButton />
+        <NextButton />
+      </div>
+      <HelpMenu
+        title='Campaign Type'
+        text='This block of text will explain to the user what they need to do in this section of the wizard. Each section is different, therefore this block is made up of dynamic text.'
+      />
     </div>
   )
 }

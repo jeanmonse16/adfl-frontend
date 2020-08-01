@@ -1,7 +1,7 @@
 import React from 'react'
-import AgencyShortcut from './AgencyShortcut.js'
-import ActionItems from './ActionItems.js'
-import HamburgerMenuButton from './HamburgerMenuButton.js'
+import AgencyShortcut from './AgencyShortcut'
+import ActionItems from './ActionItems'
+import HamburgerMenuButton from './HamburgerMenuButton'
 
 const TopNav = (props) => {
   const { title } = props

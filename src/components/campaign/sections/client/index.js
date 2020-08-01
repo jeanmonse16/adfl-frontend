@@ -1,10 +1,8 @@
 import React from 'react'
-import ChooseTitle from '../../ChooseTitle.js'
-import CardCampaign from '../CardCampaign.js'
-import PreviousButton from '../../PreviousButton.js'
-import NextButton from '../../NextButton.js'
-import HelpMenu from '../../HelpMenu.js'
-import Search from '../Search.js'
+import './client.css'
+import ChooseTitle from '../../ChooseTitle'
+import CardCampaign from '../CardCampaign'
+import Search from '../Search'
 
 import Hdepot from '../../../../images/hdepot-logo.jpg'
 import Lucia from '../../../../images/lucia3.jpg'
@@ -77,14 +75,6 @@ export default () => {
                     />
                 </div>
             </div>
-            <div className="control-panel-buttons">
-                <PreviousButton />
-                <NextButton />
-            </div>
-            <HelpMenu 
-                title = "Campaign Type"
-                text = "This block of text will explain to the user what they need to do in this section of the wizard. Each section is different, therefore this block is made up of dynamic text."
-            />
         </div>
     )
 }

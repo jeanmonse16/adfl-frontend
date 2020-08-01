@@ -1,30 +1,33 @@
 import React from 'react'
 
-export default (props) => {
+const CardCampaign = (props) => {
+    const {cardImage, cardTitle, cardAccount, contact, firstIcon, secondIcon} = props
     return(
         <div className="card-container">
             <div className="card row account-card homeDepotAcct">
                 <div className="acct-img">
-                    <img src={props.cardImage} className="img-fluid" />
+                    <img src={cardImage} className="img-fluid" />
                 </div>
                 <div className="account-info">
                     <div className="account-name">
-                        {props.cardTitle}
+                        {cardTitle}
                     </div>
                     <div className="name">
                         Account #:
-                        <span>{props.cardAccount}</span>
+                        <span>{cardAccount}</span>
                     </div>
                     <div className="email">
                         Primary Contact:
-                        <span>{props.contact}</span>
+                        <span>{contact}</span>
                     </div>
                     <div className="campaign-a">
-                        <i className={props.firstIcon}></i>
-                        <i className={props.secondIcon}></i>
+                        <i className={firstIcon}></i>
+                        <i className={secondIcon}></i>
                     </div>
                 </div>
             </div>
         </div>
     )
 }
+
+export default CardCampaign

@@ -1,8 +1,4 @@
-*{
-    margin: 0;
-    padding: 0;
-}
-.loginContainer{
+.registerContainer{
   background: url('../images/bgcopy2.jpg') center center no-repeat;
   background-size: cover;
   width: 100%;
@@ -11,19 +7,19 @@
   opacity: 1;
   text-align: center;
 }
-.login-form{
+.register-form{
   width: 40%;
   margin: auto;
   min-width: 300px;
   max-width: 400px;
   position: relative;
-  margin-top: 10%;
+  margin-top: 6%;
 }
-.login-form .login-logo {
+.register-form .register-logo {
   padding: 15px;
   text-align: center;
 }
-.login-form .login-logo img{
+.register-form .register-logo img{
   max-width: 100%;
   min-width: 100px;
   width: 250px;
@@ -33,12 +29,12 @@
   transition: transform 0.4s ease;
   transform: scale(1);
 }
-.login-form .input-group{
+.register-form .input-group{
   position: relative;
   width: 100%;
   margin-bottom: 1.5rem;
 }
-.login-form .input-group .form-control{
+.register-form .input-group .form-control{
   position: relative;
   width: 100%;
   background-color: transparent;
@@ -56,37 +52,37 @@ padding-bottom: 10px;
   transition: border 0.4s ease;
   border-radius: 0px!important;
 }
-.login-form .input-group .form-control:focus{
+.register-form .input-group .form-control:focus{
   outline: 0;
   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.12);
 }
-.login-form .input-group .form-control::placeholder{
+.register-form .input-group .form-control::placeholder{
   color: rgba(255, 255, 255, 0.5);
   text-align: left;
 }
-.login-form .input-group .loginIcons{
+.register-form .input-group .registerIcons{
   font-size: 15px;
   color: #fff;
   position: absolute;
   top: 12px;
 }
-.login-form .forgot-password{
+.register-form .already-account{
   margin-top: 20px;
 }
-.login-form .forgot-password a{
+.register-form .already-account a{
   text-decoration: none;
   color: white;  
 }
-.login-form .forgot-password a:hover{
+.register-form .already-account a:hover{
   text-decoration: underline;
   cursor: pointer;
   color: #ec115d;
 }
-.login-form .go{
+.register-form .go{
   text-align: center;
   margin-top: 40px;
 }
-.login-form .go .btn{
+.register-form .go .btn{
   background: transparent;
   border: 1px solid #fff;
   color: #fff;
@@ -95,8 +91,8 @@ padding-bottom: 10px;
   padding: 7px;
   border-radius: 15px;
 }
-.login-form .go .btn:hover,
-.login-form .go .btn:focus{
+.register-form .go .btn:hover,
+.register-form .go .btn:focus{
   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.12);
   border: 1px solid #ec115d;
 } 

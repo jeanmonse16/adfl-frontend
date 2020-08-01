@@ -1,9 +1,7 @@
 import React from 'react'
-import ChooseTitle from '../../ChooseTitle.js'
-import Types from '../Types.js'
-import NextButton from '../../NextButton.js'
-import PreviousButton from '../../PreviousButton.js'
-import HelpMenu from '../../HelpMenu.js'
+import './type.css'
+import ChooseTitle from '../../ChooseTitle'
+import Types from '../Types'
 
 export default () => {
   return (
@@ -61,14 +59,6 @@ export default () => {
           </div>
         </div>
       </div>
-      <div className='control-panel-buttons'>
-        <PreviousButton />
-        <NextButton />
-      </div>
-      <HelpMenu
-        title='Campaign Type'
-        text='This block of text will explain to the user what they need to do in this section of the wizard. Each section is different, therefore this block is made up of dynamic text.'
-      />
     </div>
   )
 }

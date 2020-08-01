@@ -3,7 +3,7 @@ import React from 'react'
 const AgencyShortcut = () => {
   return (
     <div className='client'>
-                Agency Dash
+        Agency Dash
     </div>
   )
 }

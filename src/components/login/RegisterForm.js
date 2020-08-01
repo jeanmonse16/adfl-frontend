@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
 import Axios from 'axios'
 import { createPortal } from 'react-dom'
-import LoginLogo from './LoginLogo.js'
 import InputGroup from './InputGroup.js'
 import Go from './Go.js'
+
+import Logo2 from '../../images/logo2.png'
 
 export default () => {
   const [UserInfo, setUserInfo] = useState({
@@ -68,20 +69,22 @@ export default () => {
   const [badLoginRequestMessage, setBadLoginRequestMessage] = useState(false)
 
   return (
-    <div className='login-form'>
-      <LoginLogo />
+    <div className='register-form'>
+      <div className='register-logo'>
+        <img src={Logo2} />
+      </div>
       <form>
-        <InputGroup icon='loginIcons fal fa-user' nameId='email' placeHolderText='User Email' onChange={onChange} />
-        <InputGroup icon='loginIcons fal fa-lock' nameId='username' placeHolderText='Username' onChange={onChange} />
-        <InputGroup icon='loginIcons fal fa-lock' nameId='password' placeHolderText='Password' onChange={onChange} />
-        <InputGroup icon='loginIcons fal fa-lock' nameId='confirmedPassword' placeHolderText='Confirm Password' onChange={onChange} />
+        <InputGroup icon='registerIcons fal fa-envelope' typeInput="text" nameId='email' placeHolderText='User Email' onChange={onChange} />
+        <InputGroup icon='registerIcons fal fa-user' typeInput="text" nameId='username' placeHolderText='Username' onChange={onChange} />
+        <InputGroup icon='registerIcons fal fa-lock' typeInput="password" nameId='password' placeHolderText='Password' onChange={onChange} />
+        <InputGroup icon='registerIcons fal fa-lock' typeInput="password" nameId='confirmedPassword' placeHolderText='Confirm Password' onChange={onChange} />
         {messageError
           ? <div style={{ display: 'block', width: '100%', marginTop: '0.25rem', fontSize: '80%', color: '#f86c6b' }}>
-            <span style={{ marginRight: '150px' }}>Ambos campos deben ser válidos</span>
+            <span style={{ marginRight: '100px' }}>Ambos campos deben ser válidos</span>
           </div>
           : null}
-        <div className='forgot-password'>
-          <a style={{ fontFamily: 'Arial', fontWeight: '500', fontSize: '12px' }}>Forgot Password</a>
+        <div className='already-account'>
+          <a style={{ fontFamily: 'Arial', fontWeight: '500', fontSize: '12px' }}>Already have an account? Log in</a>
         </div>
         <Go onClick={onSubmit} />
       </form>
