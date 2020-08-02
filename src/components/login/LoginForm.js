@@ -59,21 +59,21 @@ export default () => {
 
   return (
     <div className='login-form'>
-      <div className='login-logo'>
+      <div className='login-logo animated fadeInDown'>
         <img src={Logo2} />
       </div>
       <form>
-        <InputGroup icon='loginIcons fal fa-user' typeInput="text" nameId='email' placeHolderText='User Email' onChange={onChange} />
-        <InputGroup icon='loginIcons fal fa-lock' typeInput="password" nameId='password' placeHolderText='Password' onChange={onChange} />
+        <InputGroup classInput="input-group animated fadeInLeft" icon='loginIcons fal fa-user' typeInput="text" classInput="input-group animated fadeInLeft" nameId='email' placeHolderText='User Email' onChange={onChange} />
+        <InputGroup classInput="input-group animated fadeInRight" icon='loginIcons fal fa-lock' typeInput="password" nameId='password' placeHolderText='Password' onChange={onChange} />
         {messageError
           ? <div style={{ display: 'block', width: '100%', marginTop: '0.25rem', fontSize: '80%', color: '#f86c6b' }}>
             <span style={{ marginRight: '150px' }}>Ambos campos deben ser válidos</span>
           </div>
           : null}
-        <div className='forgot-password'>
+        <div className='forgot-password animated fadeInLeft'>
           <a style={{ fontFamily: 'Arial', fontWeight: '500', fontSize: '12px' }}>Forgot Password</a>
         </div>
-        <Go onClick={onSubmit} />
+        <Go onClick={onSubmit} goText="Login" />
       </form>
     </div>
   )

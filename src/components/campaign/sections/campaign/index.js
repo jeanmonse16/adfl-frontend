@@ -9,7 +9,7 @@ import Lucia from '../../../../images/lucia3.jpg'
 export default () => {
     return(
         <div>
-            <div className="timeline-step list-of-campaigns">
+            <div className="timeline-step animated fadeInUp list-of-campaigns">
                 <ChooseTitle 
                     title = "Select One or More Facebook Campaign(s)"
                 />

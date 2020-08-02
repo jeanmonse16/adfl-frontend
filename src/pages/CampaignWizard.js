@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import '../styles/campaignWizard.css'
+import '../styles/animate.css'
 import '../fontawesome-pro/js/all.js'
 import TopNav from '../components/TopNav/TopNav'
 import Details from '../components/campaign/sections/details/'
@@ -52,12 +53,12 @@ const CampaignWizard = () => {
   const ActiveTab = sectionController.module
 
   return (
-    <div>
+    <div className="animated fadeIn">
       <TopNav
         title='Welcome to the Campaign Creation Wizard'
       />
       {/* <CampaignTimeline sectionController={sectionController} /> */}
-      <div className='campaign-timeline wizard-tl'>
+      <div className='campaign-timeline wizard-tl animated fadeInDown'>
         <div className='lineup'>
           {tabs.tabs().map((section, i) => {
             return <Step key={section.id} name={section.id} controller={setSectionController} index={i} tabs={tabs} />

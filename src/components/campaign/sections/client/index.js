@@ -14,11 +14,11 @@ import PlanetFitness from '../../../../images/planet-fitness-logo.jpg'
 export default () => {
     return(
         <div>
-            <div className="timeline-step">
+            <div className="timeline-step animated fadeInUp">
                 <ChooseTitle 
                     title = "Choose a Client"
                 />
-                <p className="ch-cl">No Client Chosen</p>
+                <p className="ch-cl animated fadeInUp">No Client Chosen</p>
                 <div className="mb-4">
                     <Search 
                         searchPlaceholder = "Search Clients..."

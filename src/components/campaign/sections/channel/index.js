@@ -6,7 +6,7 @@ import Types from '../Types'
 export default () => {
   return (
     <div>
-      <div className='timeline-step campaign-type'>
+      <div className='timeline-step animated fadeInUp campaign-type'>
         <ChooseTitle
           title='Choose an Ad Channel'
         />

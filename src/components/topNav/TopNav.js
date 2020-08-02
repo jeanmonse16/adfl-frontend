@@ -7,7 +7,7 @@ const TopNav = (props) => {
   const { title } = props
   return (
     <div>
-      <nav className='top-nav'>
+      <nav className='top-nav animated fadeInDown'>
         <HamburgerMenuButton />
         <div className='nav-center'>
           <h1 className='welcome-campaign-creation'>{title}</h1>

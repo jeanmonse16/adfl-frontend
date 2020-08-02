@@ -9,7 +9,7 @@ import AcctImg from '../../../../images/acctImg.png'
 export default () => {
     return(
         <div>
-            <div className="timeline-step">
+            <div className="timeline-step animated fadeInUp">
                 <ChooseTitle 
                     title = "Select the Facebook Ad Set(s) You Want To Include From Each Campaign"
                 />
