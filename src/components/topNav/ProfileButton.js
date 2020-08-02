@@ -7,7 +7,7 @@ const ProfileButton = () => {
         <div className='profile'>
           <img src={ProfileImage} />
         </div>
-        <div className='user_menu'>
+        <div className='user_menu animated fadeInRight'>
           <ul>
             <li>
               <a><i className='fal fa-user-circle mr-2' />My Profile</a>

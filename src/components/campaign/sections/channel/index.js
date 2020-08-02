@@ -11,8 +11,9 @@ export default () => {
           title='Choose an Ad Channel'
         />
         <div className='list-types'>
+          {/*Para seleccionar un typeIcon y que aparezca su animacion,  al final del props "type-icon" añadir "selected"*/}
           <Types
-            typeIcon='fab fa-google fa-5x animated type-icon'
+            typeIcon='fab fa-google fa-5x animated type-icon selected'
             typeTitle='Google'
           />
           <Types

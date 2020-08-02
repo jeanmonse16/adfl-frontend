@@ -12,8 +12,9 @@ export default () => {
         />
         <div className='list-types'>
           <div className='list-center'>
+           {/*Para seleccionar un typeIcon y que aparezca su animacion,  al final del props "type-icon" añadir "selected"*/}
             <Types
-              typeIcon='fal fa-cloud-sun fa-5x animated type-icon'
+              typeIcon='fal fa-cloud-sun fa-5x animated type-icon selected'
               typeTitle='Weather'
             />
             <Types

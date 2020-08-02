@@ -5,6 +5,7 @@ const DashModal = () => {
     return(
         <div className="dash_modal modal-bg dashboard-modal">
             <div className="dash-body">
+            {/*para mostar el DashModal, quitar el "Display: none" de sus estilos en "dashboard.css" en la clase "dash-modal" linea 225*/}
                 <div className="modal-header">
                     <h5 className="modal-title">Welcome back, !</h5>
                 </div>
@@ -16,9 +17,11 @@ const DashModal = () => {
                             textFront = "View my Dashboard"
                         />
                         <Choice
+                        //para quitar el boton principal, añadir "out" al final de frontStatus
                             frontStatus = "front" 
                             iconFront = "dashboard-icons far fa-plus-circle"
                             textFront = "Create a New Campaign"
+                        //para colocar los dos botones secundarios, colocar "in" al final de backStatus
                             backStatus = "back"
                             iconBackLeft = "dashboard-icons fal fa-user-secret"
                             textBackLeft = "Advanced"

@@ -89,6 +89,7 @@ const CampaignWizard = () => {
         <NextButton />
       </div>
       <HelpMenu
+      //para mostar el contenido del HelpMenu, quitar el "bottom: -195px" y poner "bottom: 0;" en "campaignWizard.css" linea 129
         title='Campaign Type'
         text='This block of text will explain to the user what they need to do in this section of the wizard. Each section is different, therefore this block is made up of dynamic text.'
       />
