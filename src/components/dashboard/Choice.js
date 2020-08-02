@@ -1,14 +1,28 @@
 import React from 'react'
 
 const Choice = (props) => {
-    const { icon, text } = props 
+    const { frontStatus, backStatus, iconFront, textFront, iconBackLeft, textBackLeft, iconBackRight, textBackRight} = props 
     return(
-        <a href="#">
-            <div className="choice">
-                <i className={icon}></i>
-                <p>{text}</p>
+        <div className="n-camp">
+            <div className={frontStatus}>
+                <i className={iconFront}></i>
+                <p>{textFront}</p>
             </div>
-        </a>
+            <div className={backStatus}>
+                <a href="#">
+                    <div className="opt adv">
+                        <i className={iconBackLeft}></i>
+                        <p>{textBackLeft}</p>
+                    </div>
+                </a>
+                <a href="#">
+                    <div className="opt wiz">
+                        <i className={iconBackRight}></i>
+                        <p>{textBackRight}</p>
+                    </div>
+                </a>
+            </div>
+        </div>
     )
 }
 

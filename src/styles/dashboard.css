@@ -215,7 +215,6 @@ body{
     width: 100%;
     position: absolute;
     z-index: 3;
-    display: none;
 }
 .modal-bg{
     background-color: #000000a3;
@@ -232,8 +231,7 @@ body{
     min-width: 313px;
     width: 60%;
     margin: auto;
-    padding-top: 25px;
-    padding-bottom: 25px;
+    padding: 1rem;
     position: relative;
     margin-top: 5%;
     color: #fff;
@@ -280,11 +278,12 @@ body{
     margin-top: 35px;
     margin-bottom: 25px;
 }
-.dash_modal .dash-body .choices a{
-    text-decoration: none;
-    color: #fff;
+.dash_modal .dash-body .choices .n-camp{
+    overflow: hidden;
     position: relative;
-    width: 40%;
+    padding: 25px;
+    background: transparent;
+    width: 35%;
     margin: auto;
     border: 1px solid rgba(255, 255, 255, 0.25);
     transition: all 0.4s ease;
@@ -293,29 +292,69 @@ body{
     max-width: 100%;
     min-width: 260px;
 }
-.dash_modal .dash-body .choices a:hover{
+.dash_modal .dash-body .choices .n-camp:hover{
     box-shadow: 0 19px 38px rgba(0, 0, 0, 0.1), 0 15px 12px rgba(0, 0, 0, 0.05);
     cursor: pointer;
     background: rgba(255, 255, 255, 0.15);
 }
-.dash_modal .dash-body .choices .choice{
-    border-radius: 5px;
-    overflow: hidden;
-    position: relative;
-    margin: 10px auto;
-    max-width: 100%;
-    min-width: 260px;
-    width: 40%;
-    padding: 15px;
-    background: transparent;
-    transition: all 0.4s ease;
-}
-.dash_modal .dash-body .choices .choice .dashboard-icons{
+.dash_modal .dash-body .choices .n-camp .dashboard-icons{
     font-size: 4rem;
 }
-.dash_modal .dash-body .choices .choice p{
+.dash_modal .dash-body .choices .n-camp p{
     text-transform: capitalize;
     font-size: 15px;
     margin-top: 10px;
     margin-bottom: 0;
 }
+.dash_modal .dash-body .choices .n-camp .front{
+    height: 100%;
+    transition: top 0.4s ease;
+    top: 7px;
+    position: relative;
+}
+.dash_modal .dash-body .choices .n-camp .front.out{
+    position: relative;
+    top: -150px;
+}
+.dash_modal .dash-body .choices .n-camp .back {
+    transition: top 0.4s ease;
+    display: flex;
+    width: 100%;
+    margin: auto;
+    position: absolute;
+    top: 150px;
+    left: 0;
+    right: 0;
+    height: 100%;
+  }
+.dash_modal .dash-body .choices .n-camp .back a {
+    width: 50%;
+    transition: background 0.4s ease;
+    top: 0;
+    position: relative;
+    color: white;
+    padding: 0;
+    margin: 0;
+    border: 1px solid transparent;
+    text-decoration: none;
+    max-width: inherit;
+    min-width: auto;
+    border-radius: 0px;
+  }
+  .dash_modal .dash-body .choices .n-camp .back.in {
+    top: 0px;
+  }
+  .dash_modal .dash-body .choices .n-camp .back .opt {
+    width: 100%;
+    transition: background 0.4s ease;
+    top: 0;
+    position: relative;
+    padding-top: 25px;
+    margin: auto;
+    bottom: 0;
+    height: 100%;
+  }
+  .dash_modal .dash-body .choices .n-camp .back .opt:hover {
+    background: #EC115D;
+    cursor: pointer;
+  }
