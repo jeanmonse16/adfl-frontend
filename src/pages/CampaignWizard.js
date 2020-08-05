@@ -46,8 +46,7 @@ const CampaignWizard = () => {
   const [sectionController, setSectionController] = React.useState(tabs.activeTab())
 
   useEffect(() => {
-    setSectionController(tabs.activeTab())
-    return () => console.log(sectionController)
+    return () => setSectionController(tabs.activeTab())
   })
 
   const ActiveTab = sectionController.module
@@ -57,7 +56,6 @@ const CampaignWizard = () => {
       <TopNav
         title='Welcome to the Campaign Creation Wizard'
       />
-      {/* <CampaignTimeline sectionController={sectionController} /> */}
       <div className='campaign-timeline wizard-tl animated fadeInDown'>
         <div className='lineup'>
           {tabs.tabs().map((section, i) => {

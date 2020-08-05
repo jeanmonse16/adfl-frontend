@@ -1,8 +1,8 @@
 import React, { createContext, useState } from 'react'
 
-export const Context = createContext()
+const Context = createContext({})
 
-const Provider = ({ children }) => {
+export const UsersProvider = ({ children }) => {
   const [isAuth, setIsAuth] = useState(() => {
     return window.sessionStorage.getItem('token')
   })
@@ -26,7 +26,4 @@ const Provider = ({ children }) => {
   )
 }
 
-export default {
-  Provider,
-  Consumer: Context.Consumer
-}
+export default Context
