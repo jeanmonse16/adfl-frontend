@@ -18,11 +18,11 @@ const DashModal = () => {
                         />
                         <Choice
                         //para quitar el boton principal, añadir "out" al final de frontStatus
-                            frontStatus = "front" 
+                            frontStatus = "front out" 
                             iconFront = "dashboard-icons far fa-plus-circle"
                             textFront = "Create a New Campaign"
                         //para colocar los dos botones secundarios, colocar "in" al final de backStatus
-                            backStatus = "back"
+                            backStatus = "back in"
                             iconBackLeft = "dashboard-icons fal fa-user-secret"
                             textBackLeft = "Advanced"
                             iconBackRight = "dashboard-icons far fa-wand-magic"
