@@ -12,7 +12,7 @@ import Client from '../components/campaign/sections/client/Client.js'
 import Type from '../components/campaign/sections/type/Type.js'
 import Campaign from '../components/campaign/sections/campaign/Campaign.js'
 import AdSets from '../components/campaign/sections/ad-sets/AdSets.js'
-import TabController from '../components/TabController'
+import TabController from '../_helpers/TabController'
 import Step from '../components/campaign/Step'
 import '../fontawesome-pro/js/all.js'
 
@@ -47,8 +47,7 @@ const CampaignWizard = () => {
   const [sectionController, setSectionController] = React.useState(tabs.activeTab())
 
   useEffect(() => {
-    setSectionController(tabs.activeTab())
-    return () => console.log(sectionController)
+    return () => setSectionController(tabs.activeTab())
   })
 
   const ActiveTab = sectionController.module
@@ -58,7 +57,6 @@ const CampaignWizard = () => {
       <TopNav
         title='Welcome to the Campaign Creation Wizard'
       />
-      {/* <CampaignTimeline sectionController={sectionController} /> */}
       <div className='campaign-timeline wizard-tl'>
         <div className='lineup'>
           {tabs.tabs().map((section, i) => {

@@ -1,17 +1,22 @@
 import React, { useState } from 'react'
-import { createPortal } from 'react-dom'
+import { login } from '../../_services/user.service'
+import { useNavigate } from '@reach/router'
+import ErrorMessage from '../ErrorMessage'
+import Validator from '../../_helpers/Validator'
 import LoginLogo from './LoginLogo.js'
 import InputGroup from './InputGroup.js'
 import Go from './Go.js'
 
 export default () => {
+  const navigator = useNavigate()
+
   const [UserInfo, setUserInfo] = useState({
     email: '',
     password: ''
   })
 
   const onChange = e => {
-    setMessageError(false)
+    setMessageError('')
     setUserInfo({
       ...UserInfo,
       [e.target.name]: e.target.value
@@ -20,41 +25,17 @@ export default () => {
 
   const onSubmit = e => {
     e.preventDefault()
-    if (UserInfo.email === '' || UserInfo.password === '' || !UserInfo.email.includes('@') || !UserInfo.email.includes('.com') || !UserInfo.password.length > 4) { return setMessageError(true) } else {
+    if (Validator(UserInfo.email, 'email') !== 1 || Validator(UserInfo.password, 'password') !== 1) {
+      const setMessage = isNaN(Validator(UserInfo.email, 'email')) ? Validator(UserInfo.email, 'email') : Validator(UserInfo.password, 'password')
+      return setMessageError(setMessage)
+    } else {
       return login(UserInfo)
-        .then(response => {
-          response.text().then(text => {
-            const data = text && JSON.parse(text)
-            console.log(data)
-            if (!response.ok) {
-              if (response.status === 401) {
-                alert('Permission Error.')
-              }
-              if (response.status === 400) {
-                setBadLoginRequestMessage(true)
-              }
-              const error = (data && data.message) || response.statusText
-              return Promise.reject(error)
-            }
-            return window.Location.href('localhost:8080/campaignWizard'
-            )
-          })
-        })
-        .catch(e => console.error(e))
+        .then(response => navigator('/campaignWizard', { replace: true }))
+        .catch(e => setMessageError('ocurrio un error al iniciar sesión, intentalo de nuevo'))
     }
   }
 
-  function login (user) {
-    // eslint-disable-next-line no-undef
-    return fetch('https://adfldemo.com/api/auth/login/', {
-      method: 'post',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(user)
-    })
-  }
-
-  const [messageError, setMessageError] = useState(false)
-  const [badLoginRequestMessage, setBadLoginRequestMessage] = useState(false)
+  const [messageError, setMessageError] = useState('')
 
   return (
     <div className='login-form'>
@@ -62,34 +43,14 @@ export default () => {
       <form>
         <InputGroup icon='loginIcons fal fa-user' nameId='email' placeHolderText='User Email' onChange={onChange} />
         <InputGroup icon='loginIcons fal fa-lock' nameId='password' placeHolderText='Password' onChange={onChange} />
-        {messageError
-          ? <div style={{ display: 'block', width: '100%', marginTop: '0.25rem', fontSize: '80%', color: '#f86c6b' }}>
-            <span style={{ marginRight: '150px' }}>Ambos campos deben ser válidos</span>
-          </div>
+        {messageError !== ''
+          ? <ErrorMessage message={messageError} />
           : null}
         <div className='forgot-password'>
           <a style={{ fontFamily: 'Arial', fontWeight: '500', fontSize: '12px' }}>Forgot Password</a>
         </div>
-        <Go onClick={onSubmit} />
+        <Go onClick={onSubmit} title='Login' />
       </form>
     </div>
-  )
-}
-
-const BadLoginRequestModal = () => {
-  return createPortal(
-    <div className='generic-modal hide-footer fadeIn'>
-      <div tabIndex='-1' role='dialog' className='modal overflow-auto fade show d-block modal-warning'>
-        <div dialog='document' className='modal-dialog'>
-          <div className='modal-content'>
-            <header className='modal-header'>
-              <h5 className='modal-title'>Warning</h5>
-              <button type='button' aria-label='Close' className='close'>x</button>
-            </header>
-            <div className='modal-body'>Credenciales inválidas</div>
-          </div>
-        </div>
-      </div>
-    </div>, document.getElementById('modal')
   )
 }
