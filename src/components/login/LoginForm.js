@@ -3,8 +3,8 @@ import { login } from '../../_services/user.service'
 import { useNavigate } from '@reach/router'
 import ErrorMessage from '../ErrorMessage'
 import Validator from '../../_helpers/Validator'
-import InputGroup from './InputGroup.js'
-import Go from './Go.js'
+import InputGroup from './InputGroup'
+import Go from './Go'
 
 import Logo2 from '../../images/logo2.png'
 

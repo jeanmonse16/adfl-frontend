@@ -1,0 +1,64 @@
+.waiting-container{
+    background: url('../images/bgcopy2.jpg') center center no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    opacity: 1;
+    text-align: center;
+}
+.waiting-container .waiting-message{
+    width: 40%;
+    margin: auto;
+    min-width: 300px;
+    max-width: 500px;
+    position: relative;
+    margin-top: 13%;
+}
+.waiting-container .waiting-message .waiting-logo {
+    padding: 25px;
+    text-align: center;
+  }
+.waiting-container .waiting-message .waiting-logo img{
+    max-width: 100%;
+    min-width: 100px;
+    width: 250px;
+    height: auto;
+    position: relative;
+    z-index: 1;
+    transition: transform 0.4s ease;
+    transform: scale(1);
+}
+.waiting-container .waiting-message p{
+    color: white;
+    font-size: 20px;
+}
+.waiting-container .waiting-message .resend{
+    margin-top: 30px;
+}
+.waiting-container .waiting-message .resend p{
+    font-size: 15px;
+}
+.waiting-container .waiting-message .resend .go{
+    text-align: center;
+    margin-top: 15px;
+}
+.waiting-container .waiting-message .resend .go .btn{
+    background: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    font-weight: 500;
+    min-width: 120px;
+    padding: 7px;
+    border-radius: 15px;
+}
+.waiting-container .waiting-message .resend .go .btn:hover{
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.12);
+    border: 1px solid #ec115d;
+} 
+.waiting-container .waiting-message .resend .go .btn:focus{
+    outline: none;
+    background-color: #EC115D;
+    border: 1px solid #EC115D;
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.12);
+}
